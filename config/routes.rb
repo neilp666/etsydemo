@@ -3,7 +3,7 @@ Etsydemo2014::Application.routes.draw do
 
   devise_for :users
   resources :listings do
-    resources :orders, [:new, :create]
+    resources :orders, only: [:new, :create]
   end
 
   get "pages/about"
